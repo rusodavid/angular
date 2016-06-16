@@ -1,3 +1,5 @@
 {
+  "proxy": "http://proxy.sanitas.dom:8080",
+  "https-proxy": "http://proxy.sanitas.dom:8080",
   "directory": "app/bower_components"
 }
