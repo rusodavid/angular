@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('')
+        .module('myApp')
         .service('sharedService', sharedService);
 
     /*@ngInject*/

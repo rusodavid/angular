@@ -1,5 +1,22 @@
-<div ng-controller="View1Ctrl as ctrl">
-	<p>Default value: <input name="defaultInput" value="sdad" ng-bind="ctrl.defaultValue" ng-cloak></p>
-	<p>Shared value: <input name="sharedInput" ng-bind="ctrl.sharedValueOnController" ng-cloak></p>
-	<p>This is the partial for view 1.</p>
+<div>
+	
+	<p>
+	Default value: <input name="defaultInput" ng-model="vm.defaultValue" ng-cloak><br>
+	Shared value: <input name="sharedInput" ng-model="vm.sharedValueOnController" ng-cloak>
+	</p>
+	<div>
+	  Hello, <span ng-bind="vm.sharedValueOnController"></span>
+	</div>
+	
+	<p><h4>Default value observers:</h4>
+	No cambia el valor:  <label for="not-double-bind" ng-bind="::vm.defaultValue"></label><br>
+	{{::vm.defaultValue}}<br>
+	Cambia el valor: <label for="double-bind" ng-bind="vm.defaultValue"></label><br>
+	{{vm.defaultValue}}
+	</p>
+	
+	<p><h4>Shared value observers:</h4>
+	{{vm.sharedValueOnController}}<br>
+	<button type="button" name="Change Shared Value" ng-click="vm.changeSharedValue('nuevo valor')">Change Value</button>
+	</p>
 </div>
